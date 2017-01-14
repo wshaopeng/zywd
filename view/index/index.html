@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" user-scalable="no">
+    <title>中云沃达物联网科技有限公司</title>
+    <link href="../../commoncss/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../commoncss/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="../../commonjs/jquery-3.1.1.min.js"></script>
+    <script src="../../commonjs/bootstrap.min.js"></script>
+    <script src="../../commonjs/bootstrap-hover-dropdown.js"></script>
+    <link href="../../commoncss/common.css" rel="stylesheet" type="text/css">
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <script src="../../commonjs/common.js"></script>
+    <style>
+        /*描述区*/
+.description{
+    text-align: center;
+}
+.description p:first-child{
+    margin-top: 36px;
+    line-height: 52px;
+    font-size: 30px;
+    color: #666666;
+}
+.description p:first-child span{
+    font-weight: bold;
+    color: #333333;
+        }
+.description p:nth-child(2){
+    line-height: 34px;
+            font-size: 22px;
+            color: #777777;
+        }
+        .description p:last-child{
+            font-size: 22px;
+            color: #0088cc;
+            padding:36px 0 66px 0;
+        }
+
+        .description p:last-child span{
+            font-size: 34px;
+            font-weight: bold;
+            position: relative;
+        }
+        .description p:last-child span:after{
+            content: '';
+            position: absolute;
+            background: url("../../images/custom-underline.png") no-repeat center;
+            width: 200px;
+            height: 100px;
+            left: 0;
+            top: 10px;
+        }
+        /*无人机*/
+        .product-des{
+            text-align: center;
+        }
+        .product-des-details h3{
+            color: #333333;
+            font-size: 30px;
+        }
+        .product-des-details p{
+            color: #333333;
+            font-size: 18px;
+            line-height: 30px;
+            margin: 45px 0 25px;
+            padding: 0 81px;
+        }
+        .product-des-details a{
+            color: #0088cc;
+            font-size: 24px;
+        }
+        /*大产品图*/
+        .chart{
+            background-color: #000000;
+        }
+        .chart-pro{
+            padding-top: 50px;
+        }
+
+
+        /*四种模式图*/
+        .pro-delist{
+
+            margin-top: 66px;
+        }
+        .pro-delist-onewrap{
+            margin:0 auto;
+            border: 1px solid #dddddd;
+            /*max-width: 396px;*/
+            border-radius: 4px;
+        }
+        .pro-delist-one{
+            margin:4px;
+            height:230px;
+            background: url("../../images/mmexport1481599032249.png") center no-repeat;
+            background-size: cover;
+        }
+        .pro-one-content{
+            text-align: center;
+        }
+        .pro-one-content h4{
+            font-size: 16px;
+            line-height: 40px;
+        }
+        .pro-one-content p{
+            font-size: 12px;
+            line-height: 16px;
+            margin-bottom: 64px;
+        }
+
+    </style>
+    <script>
+        /*$(function () {
+            $(".navbar-nav li").eq(0).addClass("hover");
+        })*/
+    </script>
+</head>
+<body>
+<!--导航条-->
+<nav class="navbar" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header navbar-default logo" >
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand" href="#"><img src="../../images/logo.png"></div>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse rightsidebar " id="navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="mainnav" id="index"><a href="index.html">首页</a></li>
+                <li class="mainnav dropdown">
+                    <a data-toggle="dropdown" data-hover="dropdown" data-delay="0" href="../cloudproducts/cloudproducts.html">中云产品<span class="caret"></span></a>
+                    <ul class="subnav dropdown-menu" >
+                        <li class="subnav-content"><a href="../cloudproducts/cloudproducts.html">产品沙发一</a></li>
+                        <li class="subnav-content"><a href="#">产品二</a></li>
+                    </ul>
+                </li>
+                <li class="mainnav dropdown">
+                    <a data-toggle="dropdown" data-hover="dropdown" data-delay="0" href="../applicationprogram/applicationprogram.html">应用方案<span class="caret"></span></a>
+                    <ul class="subnav dropdown-menu">
+                        <li class="subnav-content"><a href="../applicationprogram/applicationprogram.html">方案萨芬的一</a></li>
+                        <li class="subnav-content"><a href="#">方案二</a></li>
+                    </ul>
+                </li>
+                <li class="mainnav"><a href="../newscenter/newscenter.html">新闻中心</a></li>
+                <li class="mainnav"><a href="../aboutus/aboutus.html">关于我们</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+   <!-- <div class="clearfix"></div>-->
+</nav>
+<!--banner-->
+<section class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="banner-mid col-md-4 col-md-offset-4">
+                <h3 class="banner-one">再见2016</h3>
+                <h2 class="banner-two">你好2017</h2>
+                <h4 class="banner-thr">2017:我们一起，为自己代言！</h4>
+                <h3 class="button btn btn-primary banner-four">中云沃达，站在风口等你来！</h3>
+            </div>
+        </div>
+       <div class="row">
+           <div class="banner-bot">
+               <div class="col-md-8 ">
+                   <h3>最快的方式来创造专属您的全新的<span>解决方案</span></h3>
+                   <p>有更多、更绚丽的等待您的选择</p>
+               </div>
+               <div class="col-md-4 pull-right banner-bot-right">
+                   <h4 class="col-md-3 col-md-offset-2 btn btn-primary">中云产品</h4>
+                   <span class="col-md-2">OR</span>
+                   <h4 class="col-md-3 pull-left btn btn-primary">应用方案</h4>
+               </div>
+           </div>
+       </div>
+    </div>
+<div class="clearfix"></div>
+</section>
+<section class="description">
+    <p>无限<span>布局</span>选项</p>
+    <p>你可以建立任何一种机制中云沃达平台<br>
+        企业有集中品台选项，可以为您一条龙服务.
+    </p>
+    <p>很多 <span>可重用方案！</span></p>
+</section>
+<section class="product-des clearfix">
+    <div class="container">
+        <div class="row product-des-details">
+            <div class="col-md-6">
+                <img class="img-responsive" src="../../images/pro_compressor_large_2x.png">
+            </div>
+            <div class="col-md-6">
+                <h3>Finel Cut Us Pro</h3>
+                <p>方案发射自动识别功能，无人机到达充充电区域后自动识别接收方案，是陪陪方案可自动充电，与不可自动充电</p>
+                <a href="#">进一步了解></a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--现在咨询-->
+<section class="consult clearfix">
+    <div class="container-fluid">
+        <div class="row consult-title">
+            <div class="col-sm-5 col-sm-offset-2 consult-left">
+                <p>中云沃达资源平台&nbsp;<strong>定制能耗解决方案...</strong></p>
+                <p>这里有一些选项，你可以选择定制；</p>
+            </div>
+            <div class=" btn btn-primary consult-right">现在咨询!</div>
+        </div>
+        <div class="consult-border"></div>
+    </div>
+</section>
+<section class="container-fluid">
+    <div class="row">
+        <div class="pro-delist col-md-3 col-sm-6">
+            <div class="pro-delist-onewrap">
+                <div class="pro-delist-one"></div>
+            </div>
+            <div class="pro-one-content">
+                <h4>中云产品</h4>
+                <p>能耗监测<br>温湿度传感器</p>
+            </div>
+        </div>
+        <div class="pro-delist col-md-3 col-sm-6">
+            <div class="pro-delist-onewrap">
+                <div class="pro-delist-one"></div>
+            </div>
+            <div class="pro-one-content">
+                <h4>应用方案</h4>
+                <p>能耗监测<br>温湿度传感器</p>
+            </div>
+        </div>
+        <div class="pro-delist col-md-3 col-sm-6">
+            <div class="pro-delist-onewrap">
+                <div class="pro-delist-one"></div>
+            </div>
+            <div class="pro-one-content">
+                <h4>新闻中心</h4>
+                <p>能耗监测<br>温湿度传感器</p>
+            </div>
+        </div>
+        <div class="pro-delist col-md-3 col-sm-6">
+            <div class="pro-delist-onewrap">
+                <div class="pro-delist-one"></div>
+            </div>
+            <div class="pro-one-content">
+                <h4>关于我们</h4>
+                <p>能耗监测<br>温湿度传感器</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="chart">
+        <div class="container chart-pro">
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="img-responsive" src="../../images/landing-page-style-switcher.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="technical">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 technical-left">
+                <div class="clearfix">
+                    <div class="technical-support">
+                        <h3><strong>技术支持</strong></h3>
+                        <p>只做产品研发，不做生产制造.<br>智慧控制解决方案</p>
+                    </div>
+                    <i class="technical-icon icon-star"></i>
+                </div>
+                <div class="clearfix">
+                    <div class="technical-support">
+                        <h3><strong>技术支持</strong></h3>
+                        <p>只做产品研发，不做生产制造.<br>智慧控制解决方案</p>
+                    </div>
+                    <i class="technical-icon icon-star"></i>
+                </div>
+            </div>
+            <div class="col-md-4 "><img class="img-responsive" src="../../images/top-quality-documentation.png"></div>
+            <div class="col-md-4  technical-right">
+                <div class="clearfix">
+                    <i class="technical-icon icon-star"></i>
+                    <div class="technical-support">
+                        <h3><strong>技术支持</strong></h3>
+                        <p>只做产品研发，不做生产制造.<br>智慧控制解决方案</p>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <i class="technical-icon icon-star"></i>
+                    <div class="technical-support">
+                        <h3><strong>技术支持</strong></h3>
+                        <p>只做产品研发，不做生产制造.<br>智慧控制解决方案</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="consult">
+    <div class="container-fluid">
+        <div class="row consult-title">
+            <div class="col-sm-5 col-sm-offset-2 consult-left">
+                <p>中云沃达资源平台&nbsp;<strong>定制能耗解决方案...</strong></p>
+                <p>这里有一些选项，你可以选择定制；</p>
+            </div>
+            <div class=" btn btn-primary consult-right">现在咨询!</div>
+        </div>
+    </div>
+</section>
+<section class="technology-advantage">
+    <div class="container">
+        <div class="advantage-top">
+            <h2><strong>技术优势</strong></h2>
+            <p>有很多理由选择中云沃达平台，这里有几项</p>
+        </div>
+        <div class="row advantage-mid">
+            <div class="col-md-3 col-sm-6 iconokwrap">
+                <div><i class="icon-ok"></i><span>解决方案</span></div>
+                <div><i class="icon-ok"></i><span>解决方案</span></div>
+                <div><i class="icon-ok"></i><span>解决方案</span></div>
+            </div>
+            <div class="col-md-3 col-sm-6 iconokwrap">
+                <div><i class="icon-ok"></i><span>解决方案</span></div>
+                <div><i class="icon-ok"></i><span>解决方案</span></div>
+                <div><i class="icon-ok"></i><span>解决方案</span></div>
+            </div>
+            <div class="col-md-3 col-sm-6 iconokwrap">
+                <div><i class="icon-ok"></i><span>解决方案</span></div>
+                <div><i class="icon-ok"></i><span>解决方案</span></div>
+                <div><i class="icon-ok"></i><span>解决方案</span></div>
+            </div>
+            <div class="col-md-3 col-sm-6 iconokwrap">
+                <div><i class="icon-ok"></i><span>解决方案</span></div>
+                <div><i class="icon-ok"></i><span>解决方案</span></div>
+                <div><i class="icon-ok"></i><span>解决方案</span></div>
+            </div>
+        </div>
+        <div class="advantage-bot">
+            <span><strong>等等更多...</strong></span>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</section>
+<footer>
+    <div class="container">
+        <div class="row footer-content">
+            <div class="col-md-4 foot-us">
+                <h4>关于我们</h4>
+                <p>中云沃达是国内首家产品应用提供商系统服务商，制作智慧控制解决方案，系统服务商，不做系统集成。网站优化推广、品牌营销为一体的大数据营销方案。并与一线慧联网企业建立长期合作关系。不做系统集成。网站优化推广、品牌营销为一体的大数据营销方案。并与一线慧联网企业建立长期合作关系。并与一线慧联网企业建立长期合作关系。</p>
+            </div>
+            <div class="col-md-3 foot-con-title">
+                <h4>最新文章</h4>
+                <p><a>工业物联网的系统架构由系统软件网络</a></p>
+                <p><a>系统通讯管道FIFITH NET</a></p>
+                <p><a>绿色建筑智能遮阳系统</a></p>
+                <p><a>工业物联网解决方案和系统服务</a></p>
+            </div>
+            <div class="col-md-3 foot-con-contact">
+                <h4>联系我们</h4>
+                <div class="clearfix">
+                    <i class="icon-map-marker"></i>
+                    <p>地址:<br>山东省烟台市明达西路11号</p>
+                </div>
+                <div class="clearfix">
+                    <i class="icon-phone"></i>
+                    <p>电话:<br><a>0535-940818</a></p>
+                </div>
+                <div class="clearfix">
+                    <i class="icon-envelope"></i>
+                    <p>联系邮箱:<br><a>afsd@zhognyunworld.com</a></p>
+                </div>
+                <div class="clearfix">
+                    <i class="icon-group"></i>
+                    <p>战略合作:<br>华为加盟fifthnet</p>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <h4>关于我们</h4>
+                <img src="../../images/zyweixin.jpg">
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

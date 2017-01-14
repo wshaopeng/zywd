@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" user-scalable="no">
+    <title>中云沃达物联网科技有限公司</title>
+    <link href="../../commoncss/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../commoncss/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="../../commonjs/jquery-3.1.1.min.js"></script>
+    <script src="../../commonjs/bootstrap.min.js"></script>
+    <script src="../../commonjs/bootstrap-hover-dropdown.js"></script>
+    <link href="../../commoncss/common.css" rel="stylesheet" type="text/css">
+    <link href="successfulcase.css" rel="stylesheet" type="text/css">
+    <script src="../../commonjs/common.js"></script>
+
+    <style>
+        /*小banner*/
+        .smabanner{
+            background-color: #000000;
+        }
+        .fircrumbs{
+            padding:25px 0 10px;
+        }
+        .fircrumbs li{
+            float: left;
+        }
+        .fircrumbs li:last-child:before{
+            /*content:"/\00a0";*/
+            content:"/";
+            color: #FFFFFF;
+        }
+        .fircrumbs a{
+            font-size: 16px;
+        }
+        .fircrumbs li:last-child a{
+            color: #808080;
+        }
+        .seccrumbs h1{
+            color: #FFFFFF;
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+        .conceptmap{
+            margin: 25px 0 70px 0;
+        }
+        .gredientline{
+            height: 1px;
+            background: -webkit-linear-gradient(0deg,#FFFFFF 0%,#cccccc 50%,#FFFFFF 100%);
+        }
+        .aboutmain{
+            margin-top: 50px;
+        }
+        .culturalconcept ul li{
+            list-style: disc!important;
+        }
+        .culturalconcept>h3{
+            font-size: 34px;
+            margin-bottom: 40px;
+        }
+        .culturalconcept ul li p{
+            font-size: 16px;
+            padding-left: 18px;
+            color: #333333;
+            line-height:22px;
+        }
+        .culturalconcept>p{
+            font-size: 18px;
+            color: #333333;
+            line-height: 32px;
+            margin:36px 0 14px;
+        }
+        .conceptfeature{
+            margin-bottom: 82px;
+        }
+        .con-feature-icon{
+            color: #0088cc;
+            float: left;
+            font-size: 30px;
+        }
+        .con-feature-info{
+            padding-left: 56px;
+            line-height: 30px;
+        }
+        .con-feature-info h3{
+            color: #0088cc;
+            font-size: 20px;
+        }
+        .con-feature-info p{
+            font-size: 16px;
+        }
+        .con-feature-info span{
+            color: #0088cc;
+            font-size: 20px;
+        }
+        .workingspace{
+            margin-bottom: 150px;
+        }
+        .workingspace h3{
+            font-size: 34px;
+            line-height: 88px;
+        }
+        .workingspace-inner{
+            height:75px;
+            background: url("../../images/our-office-1.png") no-repeat center;
+            background-size: cover;
+            margin:3px;
+        }
+        .workingspace-wrap{
+            border: 1px solid #808080;
+            border-radius: 4px;
+        }
+        /*折叠*/
+        .panel-group{
+            padding-top: 15px;
+        }
+        .panel-title a{
+            display: inline-block;
+            color: #0088cc;
+            font-size: 20px;
+            line-height: 35px;
+        }
+        .panel-body{
+            font-size: 14px;
+        }
+        .panel{
+            width:70%;
+        }
+        .ourposition h3{
+            font-size: 30px;
+            margin:60px 0 30px;
+        }
+        .contactinfo{
+            margin-top: 20px;
+        }
+        .contactinfo span{
+            padding-left: 10px;
+            line-height: 40px;
+        }
+        .contactinfo ul li i{
+            color: #0088cc;
+        }
+        /*map*/
+       /* .ourposition-map { margin: 0; font: 13px/1.5 "Microsoft YaHei", "Helvetica Neue", "Sans-Serif"; min-height: 960px; min-width: 600px; }*/
+        .my-map { margin: 0 auto; width: 458px; height: 248px; }
+        .my-map .regionmarker { background: url(http://lbs.amap.com/console/public/show/marker.png) no-repeat; }
+        .my-map .regionmarker-cir { height: 31px; width: 28px; }
+        .my-map .regionmarker-cir-red { background-position: -11px -5px; }
+        .amap-container{height: 100%;}
+    </style>
+    <script src="http://webapi.amap.com/maps?v=1.3&key=8325164e247e15eea68b59e89200988b"></script>
+    <script>
+        $(function () {
+            !function(){
+                var infoWindow, map, level = 15,
+                        center = {lng: 121.410674, lat: 37.43839},
+                        features = [{type: "Marker", name: "中云沃达(山东)物联网科技有限公司", desc: "亲，就是这里哟！", color: "red", icon: "cir", offset: {x: -9, y: -31}, lnglat: {lng: 121.413656, lat: 37.436822}}];
+
+                function loadFeatures(){
+                    for(var feature, data, i = 0, len = features.length, j, jl, path; i < len; i++){
+                        data = features[i];
+                        switch(data.type){
+                            case "Marker":
+                                feature = new AMap.Marker({ map: map, position: new AMap.LngLat(data.lnglat.lng, data.lnglat.lat),
+                                    zIndex: 3, extData: data, offset: new AMap.Pixel(data.offset.x, data.offset.y), title: data.name,
+                                    content: '<div class="regionmarker regionmarker-' + data.icon + ' regionmarker-'+ data.icon +'-' + data.color +'"></div>' });
+                                break;
+                            case "Polyline":
+                                for(j = 0, jl = data.lnglat.length, path = []; j < jl; j++){
+                                    path.push(new AMap.LngLat(data.lnglat[j].lng, data.lnglat[j].lat));
+                                }
+                                feature = new AMap.Polyline({ map: map, path: path, extData: data, zIndex: 2,
+                                    strokeWeight: data.strokeWeight, strokeColor: data.strokeColor, strokeOpacity: data.strokeOpacity });
+                                break;
+                            case "Polygon":
+                                for(j = 0, jl = data.lnglat.length, path = []; j < jl; j++){
+                                    path.push(new AMap.LngLat(data.lnglat[j].lng, data.lnglat[j].lat));
+                                }
+                                feature = new AMap.Polygon({ map: map, path: path, extData: data, zIndex: 1,
+                                    strokeWeight: data.strokeWeight, strokeColor: data.strokeColor, strokeOpacity: data.strokeOpacity,
+                                    fillColor: data.fillColor, fillOpacity: data.fillOpacity });
+                                break;
+                            default: feature = null;
+                        }
+                        if(feature){ AMap.event.addListener(feature, "click", mapFeatureClick); }
+                    }
+                }
+
+                function mapFeatureClick(e){
+                    if(!infoWindow){ infoWindow = new AMap.InfoWindow({autoMove: true}); }
+                    var extData = e.target.getExtData();
+                    infoWindow.setContent("<h5>" + extData.name + "</h5><div>" + extData.desc + "</div>");
+                    infoWindow.open(map, e.lnglat);
+                }
+
+                map = new AMap.Map("mapContainer", {center: new AMap.LngLat(center.lng, center.lat), level: level});
+
+                loadFeatures();
+
+                map.on('complete', function(){
+                    map.plugin(["AMap.ToolBar", "AMap.OverView", "AMap.Scale"], function(){
+                        map.addControl(new AMap.ToolBar);
+                        map.addControl(new AMap.OverView);
+                        map.addControl(new AMap.Scale);
+                    });
+                })
+
+            }();
+        })
+    </script>
+</head>
+<body>
+<!--导航条-->
+<nav class="navbar" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header navbar-default logo" >
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand" href="#"><img src="../../images/logo.png"></div>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse rightsidebar " id="navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="mainnav"><a href="../index/index.html">首页</a></li>
+                <li class="mainnav dropdown">
+                    <a data-toggle="dropdown" data-hover="dropdown" data-delay="0" href="../cloudproducts/cloudproducts.html">中云产品<span class="caret"></span></a>
+                    <ul class="subnav dropdown-menu" >
+                        <li class="subnav-content"><a href="../cloudproducts/cloudproducts.html">产品沙发一</a></li>
+                        <li class="subnav-content"><a href="#">产品二</a></li>
+                    </ul>
+                </li>
+                <li class="mainnav dropdown">
+                    <a data-toggle="dropdown" data-hover="dropdown" data-delay="0" href="../applicationprogram/applicationprogram.html">应用方案<span class="caret"></span></a>
+                    <ul class="subnav dropdown-menu">
+                        <li class="subnav-content"><a href="../applicationprogram/applicationprogram.html">方案萨芬的一</a></li>
+                        <li class="subnav-content"><a href="#">方案二</a></li>
+                    </ul>
+                </li>
+                <li class="mainnav"><a href="../newscenter/newscenter.html">新闻中心</a></li>
+                <li class="mainnav"><a href="aboutus.html">关于我们</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+    <!-- <div class="clearfix"></div>-->
+</nav>
+<!--xiaobanner-->
+<div class="smabanner">
+    <div class="container">
+        <div class="row fircrumbs">
+            <div class="col-md-12">
+                <ul>
+                    <li>
+                        <a href="../index/index.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="../cloudproducts/cloudproducts.html">关于我们</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row seccrumbs">
+            <div class="col-md-12">
+                <h1>关于我们</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="container">
+    <div class="conceptmap">
+        <img src="../../images/our-office-1.png" class="img-responsive">
+    </div>
+    <div class="gredientline"></div>
+</section>
+<section class="aboutmain">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="culturalconcept">
+                    <h3><strong>企业文化</strong>理念</h3>
+                    <ul>
+                        <li><p>一、企业使命<br>撒地方是打发沙发萨芬的沙发发撒个萨芬撒地方撒地方撒个。发生撒地方撒个沙发过水热</p></li>
+                        <li><p>一、企业使命<br>撒地方是打发沙发萨芬的沙发发撒个萨芬撒地方撒地方撒个。发生撒地方撒个沙发过水热</p></li>
+                        <li><p>一、企业使命<br>撒地方是打发沙发萨芬的沙发发撒个萨芬撒地方撒地方撒个。发生撒地方撒个沙发过水热</p></li>
+                        <li><p>一、企业使命<br>撒地方是打发沙发萨芬的沙发发撒个萨芬撒地方撒地方撒个。发生撒地方撒个沙发过水热</p></li>
+                        <li><p>一、企业使命<br>撒地方是打发沙发萨芬的沙发发撒个萨芬撒地方撒地方撒个。发生撒地方撒个沙发过水热</p></li>
+                        <li><p>一、企业使命<br>撒地方是打发沙发萨芬的沙发发撒个萨芬撒地方撒地方撒个。发生撒地方撒个沙发过水热</p></li>
+                    </ul>
+                    <p>阿斯蒂芬阿斯蒂芬萨芬的阿，斯蒂芬哦撒娇的看法味儿就好刷卡机东方，红忘了链接哈师大风口浪尖阿萨德，发挥奥斯卡的金凤凰！</p>
+                    <div class="conceptfeature clearfix">
+                        <div class="col-md-6">
+                            <i class="con-feature-icon icon icon-star"></i>
+                            <div class="con-feature-info">
+                                <h3>多年的服务</h3>
+                                <p>发展较早、规模较大、客户较多的一家<span>系统服务商</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <i class="con-feature-icon icon icon-star"></i>
+                            <div class="con-feature-info">
+                                <h3>深受顾客喜爱</h3>
+                                <p>发展较早、规模较大、客户较多的一家
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="gredientline"></div>
+                <div class="workingspace">
+                    <h3>工作<strong>空间</strong></h3>
+                    <div class="col-sm-4">
+                        <div class="workingspace-wrap">
+                            <div class="workingspace-inner"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="workingspace-wrap">
+                            <div class="workingspace-inner"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="workingspace-wrap">
+                            <div class="workingspace-inner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="main-aboutus">
+                    <h3>关于<strong>我们</strong></h3>
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a  data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <i class="icon icon-star"></i>
+                                        <span>互动营销</span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    111阿斯利康咖啡喝啊鞥经历过案例阿斯利康好返回返回覆盖体育健身房他解决
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <i class="icon icon-star"></i>
+                                        <span>安全策略</span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    222阿斯利康咖啡喝啊鞥经历过案例阿斯利康好返回返回覆盖体育健身房他解决
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse"  data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <i class="icon icon-star"></i>
+                                        <span>产品优势</span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    333阿斯利康咖啡喝啊鞥经历过案例阿斯利康好返回返回覆盖体育健身房他解决
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ourposition">
+                    <h3>我们的<strong>位置</strong></h3>
+                    <div class="ourposition-map">
+                        <div id="wrap" class="my-map">
+                            <div id="mapContainer"></div>
+                        </div>
+                    </div>
+                    <div class="contactinfo">
+                        <ul>
+                            <li><i class="icon icon-map-marker"></i><span><strong>地址：山东省烟台市莱山区明达西路11号</strong></span></li>
+                            <li><i class="icon icon-phone"></i><span><strong>电话：400-810-0535</strong></span></li>
+                            <li><i class="icon icon-envelope"></i><span><strong>联系邮箱 admin@zhongyunworld.com</strong></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="row footer-content">
+            <div class="col-md-4 foot-us">
+                <h4>关于我们</h4>
+                <p>中云沃达是国内首家产品应用提供商系统服务商，制作智慧控制解决方案，系统服务商，不做系统集成。网站优化推广、品牌营销为一体的大数据营销方案。并与一线慧联网企业建立长期合作关系。不做系统集成。网站优化推广、品牌营销为一体的大数据营销方案。并与一线慧联网企业建立长期合作关系。并与一线慧联网企业建立长期合作关系。</p>
+            </div>
+            <div class="col-md-3 foot-con-title">
+                <h4>最新文章</h4>
+                <p><a>工业物联网的系统架构由系统软件网络</a></p>
+                <p><a>系统通讯管道FIFITH NET</a></p>
+                <p><a>绿色建筑智能遮阳系统</a></p>
+                <p><a>工业物联网解决方案和系统服务</a></p>
+            </div>
+            <div class="col-md-3 foot-con-contact">
+                <h4>联系我们</h4>
+                <div class="clearfix">
+                    <i class="icon-map-marker"></i>
+                    <p>地址:<br>山东省烟台市明达西路11号</p>
+                </div>
+                <div class="clearfix">
+                    <i class="icon-phone"></i>
+                    <p>电话:<br><a>0535-940818</a></p>
+                </div>
+                <div class="clearfix">
+                    <i class="icon-envelope"></i>
+                    <p>联系邮箱:<br><a>afsd@zhognyunworld.com</a></p>
+                </div>
+                <div class="clearfix">
+                    <i class="icon-group"></i>
+                    <p>战略合作:<br>华为加盟fifthnet</p>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <h4>关于我们</h4>
+                <img src="../../images/zyweixin.jpg">
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
