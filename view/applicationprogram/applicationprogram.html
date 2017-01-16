@@ -52,7 +52,16 @@
             height:inherit;
             overflow: visible;
         }
-
+        @media (min-width: 768px) and (max-width: 992px){
+            .carousel-inner{
+                margin-top: 60px;
+            }
+        }
+        @media (max-width: 464px){
+            .carousel-inner{
+                margin-top: 60px;
+            }
+        }
         .carousel-inner>.item{
             position: absolute;
             width:100%;
@@ -222,15 +231,15 @@
                 <i class="icon icon-star"></i>
                 <br><strong>客户留言</strong>
             </h2>
-            <!--<div id="carousel-example-generic " class="carousel slide feedback-content" data-ride="carousel">
-                &lt;!&ndash; Indicators &ndash;&gt;
+            <div id="carousel-example-generic " class="carousel slide feedback-content" data-ride="carousel">
+                <!-- Indicators -->
                 <ol class="carousel-indicators">
                     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                 </ol>
 
-                &lt;!&ndash; Wrapper for slides &ndash;&gt;
+                <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
                         <div class="carousel-caption">
@@ -252,8 +261,8 @@
                     </div>
 
                 </div>
-            </div>-->
-            <div class="carousel-inner" role="listbox">
+            </div>
+            <!--<div class="carousel-inner" role="listbox">
                 <div class="item active">
                     <div class="carousel-caption">
                         <p>中云沃达是非常有信誉的公司，让我们节省很大成本，提高了我们的利润，提供
@@ -278,7 +287,7 @@
                 <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol>
+            </ol>-->
         </div>
     </div>
 </div>

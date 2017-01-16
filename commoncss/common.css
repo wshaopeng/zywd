@@ -5,6 +5,7 @@ body{
 *{
     margin:0;
     padding:0;
+    outline: none !important;
 }
 h1,h2,h3,h4,h5,h6,ul,li,p{
     margin:0;
@@ -390,6 +391,7 @@ footer a:hover{
 .cloudpro-video img{
     width:459px;
     height:323px;
+    margin:0 auto;
 }
 /*成功案例*/
 .case-title{
