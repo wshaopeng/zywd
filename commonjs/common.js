@@ -30,6 +30,14 @@ $(function(){
         if(cutHref==cutLocatePath){
             console.log("成功了");
             $(this).addClass("hover");
-        };
+        }
     });
+    $(".backtop").click(function () {
+        console.log("aaa");
+           //alert($("#header").offset().top);
+       //$(window).scrollTop($("#header").offset().top);
+        var backdistance=$("#header").offset().top;
+        //console.log(backdistance);
+        $('body').animate({scrollTop:backdistance},1000,'linear');
+    })
 });
