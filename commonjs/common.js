@@ -23,6 +23,7 @@ $(function(){
     console.log("当前截取的窗口:"+cutLocatePath);
     $("li.mainnav").children("a").each(function () {
         var href=$(this).attr('href');
+        //var datatarget=$(this).attr('data-target');
         //console.log("123"+$(this));
         var hrefArray=href.split("/");
         var cutHref=hrefArray[hrefArray.length-1];
@@ -40,4 +41,12 @@ $(function(){
         //console.log(backdistance);
         $('body').animate({scrollTop:backdistance},1000,'linear');
     })
+    $(".backtop").hide();
+    $(window).scroll(function () {
+        if($(window).scrollTop()>=1000){
+            $(".backtop").fadeIn(400);
+        }else {
+            $(".backtop").fadeOut(200);
+        }
+    });
 });
