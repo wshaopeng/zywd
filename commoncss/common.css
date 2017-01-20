@@ -99,6 +99,11 @@ img{
     width:100%;
     background-color: #000000;
 }
+.index-banner{
+    width:100%;
+    background: url("../images/index-banner.png") no-repeat center;
+    background-size: cover;
+}
 .banner-mid{
     color: #ffffff;
     text-align: center;
